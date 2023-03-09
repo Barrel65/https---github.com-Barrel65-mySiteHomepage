@@ -109,6 +109,10 @@ html, body{
 	.slider__item{
 		width: 43vw;
 	}
+
+	.slider__item:hover::after{
+		transform: scale(0.9);
+	}
 }
 
 @media (max-width:767px){
@@ -126,6 +130,6 @@ html, body{
 	}
 
 	.slider__item:hover::after{
-		transform: scale(1);
+		transform: scale(0.96);
 	}
 }
