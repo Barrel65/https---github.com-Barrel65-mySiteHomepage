@@ -44,7 +44,7 @@ html, body{
 }
 
 .slider__item:hover{
-	transform: scale(1.05);
+	transform: scale(1.07);
 
 }
 
@@ -53,6 +53,7 @@ html, body{
 	height: 100%;
 	background-size:cover;
 	border-radius: 8px;
+	z-index:20;
 }
 
 .slider:nth-child(odd) .slider__img{
