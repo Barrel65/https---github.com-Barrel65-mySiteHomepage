@@ -1,6 +1,6 @@
 
 if (document.documentElement.clientWidth > 992) {
-	runSwiper();
+	runSwiper(1.75);
 	bindSwipers(slider1, slider2, slider3, slider4);
 } else if (document.documentElement.clientWidth > 767) {
 	const box1 = document.querySelector('.slider1 .swiper-wrapper');
@@ -19,7 +19,7 @@ if (document.documentElement.clientWidth > 992) {
 		box3.appendChild(items2[i]);
 	}
 	wrapper4.parentNode.removeChild(wrapper4);
-	runSwiper();
+	runSwiper(1.7);
 	bindSwipers(slider1, slider2);
 } else {
 	const box1 = document.querySelector('.slider1 .swiper-wrapper');
@@ -44,20 +44,20 @@ if (document.documentElement.clientWidth > 992) {
 	wrapper2.parentNode.removeChild(wrapper2);
 	wrapper3.parentNode.removeChild(wrapper3);
 	wrapper4.parentNode.removeChild(wrapper4);
-	runSwiper();
+	runSwiper(1.4);
 	bindSwipers(slider1);
 }
 
 
 
-function runSwiper() {
+function runSwiper(slidesPerScreen) {
 	document.querySelectorAll('.slider').forEach((n, i) => {
 		window[`slider${i + 1}`] = new Swiper(n, {
 			freeMode: true,
 			centeredSlides: true,
 			direction: 'vertical',
 			mousewheel: true,
-			slidesPerView: 1.75,
+			slidesPerView: slidesPerScreen,
 			slidesOffsetBefore: -125,
 		})
 	})
